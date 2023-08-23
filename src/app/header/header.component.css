@@ -1,0 +1,33 @@
+.d-flex{
+  position:absolute;
+  top:40px;
+  left:1100px;
+  }
+  .btn-outline-success {
+     
+      color: rgb(10, 10, 10);
+      background-color: #070707;
+      border: 2px solid #080808;
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width:57px;
+      height:50px;
+  }
+   
+  .btn-outline-success:hover {
+      color: #4CAF50;
+      background-color: #4CAF50;
+      border: 2px solid #4CAF50;
+  }
+  .form-control {
+  margin-right: 10px;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  
+  }
+  .search-button i{
+    color: white;
+  }

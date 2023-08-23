@@ -1,0 +1,31 @@
+  <div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      <a routerLink="news" class="list-group-item list-group-item-action active" aria-current="true">KATEGORİLER</a>
+      <a routerLink="business" class="list-group-item list-group-item-action">Business</a>
+      <a routerLink="Entertainment" class="list-group-item list-group-item-action">Entertainment</a>
+      <a routerlink="General" class="list-group-item list-group-item-action">General</a>
+      <a routerlink="health" class="list-group-item list-group-item-action">Health</a>
+      <a routerklink="science" class="list-group-item list-group-item-action">Science</a>
+      <a routerlink="sport" class="list-group-item list-group-item-action">Sport</a>
+      <a routerlink="tech" class="list-group-item list-group-item-action">Technology</a>
+    
+    </div>
+    </div>
+    <div class="col-md-9">
+  <div class="container mt-5"> 
+   
+    <div class="row"> 
+     <div *ngFor="let d of categoryDisplay" class="col-lg-4 mt-2 mb-2"> <!--Bu ifade, döngünün nasıl çalışacağını belirtir.
+                                                                            categoryDisplay adındaki bir dizi üzerinde döngü oluşturulacak. 
+                                                                            Her bir döngü adımında, mevcut öğe d adlı bir değişkene atanır. 
+                                                                            Bu değişken, döngü içerisindeki öğeyi temsil eder.-->
+       <div class="box"> <img src="{{d.urlToImage}}" width="100%"> 
+         <h5 class="mt-2 mb-2">{{d.title}}</h5> 
+         <a href="{{d.url}}" target="_blank" class="btn btn-dark btn-sm mt-2">Read more</a> 
+       </div> 
+     </div> 
+   </div> 
+ </div>
+</div>
+ 

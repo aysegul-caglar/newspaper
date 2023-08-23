@@ -1,0 +1,290 @@
+
+<app-carousel></app-carousel>
+
+
+
+<!---------------------------Editor's-Pick-Trending--------------------------------->
+
+<div
+  id="Editor's-Pick-Trending"
+  class="site-section"
+  style="width: 100%; height: 100%; padding: 10px"
+>
+  <div class="row" style="margin: 5%">
+    <div class="row section-1 col-md-8">
+      <div class="section-side col-md-8 mt-5">Editor's Pick</div>
+      <div class="col-sm-12 col-lg-6 mt-5">
+        <img
+          src="{{
+            editorPickFirst.urlToImage
+              ? editorPickFirst.urlToImage
+              : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+          }}"
+          class="img-fluid"
+          alt="Editor`s pick"
+        />
+        <h4>{{ editorPickFirst.title }}</h4>
+        <p>
+          {{ editorPickFirst.description }}
+        </p>
+        <div class="post-meta">
+          <span class="d-block"
+            ><a href="#">{{ editorPickFirst.author }}</a> in
+            <a href="#">{{ editorPickFirst.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ editorPickFirst.publishedAt | date : "MMMM dd"
+            }}<span class="mx-1"></span>
+          </span>
+        </div>
+      </div>
+      <div class="row col-sm-12 col-lg-6 d-grid gap-3 mt-5">
+        <div *ngFor="let item of editorsPicks" class="row">
+          <div class="col-4" style="padding: 0px">
+            <img
+              src="{{
+                item.urlToImage
+                  ? item.urlToImage
+                  : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+              }}"
+              width="100%"
+              height="100%"
+              alt=""
+              style="object-fit: cover"
+            />
+          </div>
+          <div class="col-8">
+            <h6>
+              <a href="">{{ item.title }}</a>
+            </h6>
+            <div class="post-meta">
+              <span class="d-block"
+                ><a href="#">{{ item.author }}</a> in
+                <a href="#">{{ item.source.name }}</a></span
+              >
+              <span class="date-read"
+                >{{ item.publishedAt | date : "MMMM dd" }}
+                <span class="mx-1"></span
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-2 col-sm-12 col-lg-4 d-grid gap-3">
+      <div class="d-block col-md-8 mt-5 section-side">Trending</div>
+      <div *ngFor="let item of trends" class="d-flex">
+        <div class="number">0{{ trends.indexOf(item) + 1 }}</div>
+        <div class="trend-contents">
+          <h5>
+            <a href="">{{ item.title }}</a>
+          </h5>
+          <div class="">
+            <span class="d-block"
+              ><a href="">{{ item.author }}</a> in
+              <a href="">{{ item.source.name }}</a></span
+            >
+            <span class="date-read"
+              >{{ item.publishedAt | date : "MMMM dd" }}
+              <span class="mx-1"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------Editor's-Pick-Trending--------------------------------->
+
+<!---------------------------Editor's-Pick--------------------------------->
+
+<div
+  id="carouselExample "
+  class="carousel slide pointer-event"
+  style="width: 90%; height: 50%; margin: 5%; padding: 0px 50px"
+>
+  <div class="carousel-inner">
+    <div
+      class="carousel-item active d-flex row"
+      style="background-color: #f8f9fa"
+    >
+      <div class="col-lg-6" style="padding: 0px">
+        <img
+          src="{{
+            editorPick.urlToImage
+              ? editorPick.urlToImage
+              : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+          }}"
+          class="d-block w-100"
+          width="600"
+          height="400"
+          alt="Editor`s pick"
+        />
+      </div>
+      <div class="col-lg-6 col" style="padding: 50px">
+        <span class="caption"></span>
+        <h4>
+          <a href="blog-single.html">{{ editorPick.title }}</a>
+        </h4>
+        <p class="mb-3">
+          {{ editorPick.description }}
+        </p>
+        <div class="post-meta">
+          <span class="d-block"
+            ><a href="#">{{ editorPick.author }}</a> in
+            <a href="#">{{ editorPick.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ editorPick.publishedAt | date : "MMMM dd" }}
+            <span class="mx-1"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------Editor's-Pick--------------------------------->
+
+<!---------------------------Politics-Business--------------------------------->
+
+<div id="Politics-Business" class="row" style="margin: 5%">
+  <div class="row col-sm-12 col-lg-6 d-grid gap-3 mt-5">
+    <div class="section-side col-6 mt-5">Sports</div>
+    <div *ngFor="let item of sports" class="row">
+      <div class="col-4" style="padding: 0px">
+        <img
+          src="{{
+            item.urlToImage
+              ? item.urlToImage
+              : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+          }}"
+          width="100%"
+          height="100%"
+          alt=""
+        />
+      </div>
+      <div class="col-8">
+        <h6>
+          <a href="">{{ item.title }}</a>
+        </h6>
+        <p class="mb-3">
+          {{ item.description }}
+        </p>
+
+        <div class="post-meta">
+          <span class="d-block"
+            ><a href="#">{{ item.author }}</a> in
+            <a href="#">{{ item.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ item.publishedAt | date : "MMMM dd" }} <span class="mx-1"></span
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-sm-12 col-lg-6 d-grid gap-3 mt-5">
+    <div class="section-side col-6 mt-5">Business</div>
+    <div *ngFor="let item of business" class="row">
+      <div class="col-4" style="padding: 0px">
+        <img
+          src="{{
+            item.urlToImage
+              ? item.urlToImage
+              : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+          }}"
+          width="100%"
+          height="100%"
+          alt=""
+        />
+      </div>
+      <div class="col-8">
+        <h6>
+          <a href="">{{ item.title }}</a>
+        </h6>
+        <p class="mb-3">
+          {{ item.description }}
+        </p>
+        <div class="post-meta">
+          <span class="d-block"
+            ><a href="#">{{ item.author }}</a> in
+            <a href="#">{{ item.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ item.publishedAt | date : "MMMM dd" }} <span class="mx-1"></span
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------Politics-Business--------------------------------->
+
+<!---------------------------Recent_News-Popular_Posts--------------------------------->
+
+<div id="Recent_News-Popular_Posts" class="row" style="margin: 5%">
+  <div class="row col-sm-12 col-lg-8 gap-3 mt-5">
+    <div class="section-side col-8">Recent News</div>
+
+    <div *ngFor="let item of recent" class="row">
+      <div class="col-8">
+        <h6>
+          <a href="">{{ item.title }}</a>
+        </h6>
+        <p class="mb-3">
+          {{ item.description }}
+        </p>
+        <div class="post-meta">
+          <span class="d-block"
+            ><a href="#">{{ item.author }}</a> in
+            <a href="#">{{ item.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ item.publishedAt | date : "MMMM dd" }} <span class="mx-1"></span
+          ></span>
+        </div>
+      </div>
+
+      <div class="col-4" style="padding: 0px">
+        <img
+          src="{{
+            item.urlToImage
+              ? item.urlToImage
+              : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+          }}"
+          width="100%"
+          height="100%"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-sm-12 col-lg-4 gap-3 mt-5">
+    <div class="row">
+      <div class="section-side col-12">Popular Posts</div>
+    </div>
+
+    <div *ngFor="let item of popular" class="d-flex">
+      <div class="col-4 number">0{{ popular.indexOf(item) + 1 }}</div>
+      <div class="col-8 trend-contents">
+        <h5>
+          <a href="">{{ item.title }}</a>
+        </h5>
+        <div class="">
+          <span class="d-block"
+            ><a href="">{{ item.author }}</a> in
+            <a href="">{{ item.source.name }}</a></span
+          >
+          <span class="date-read"
+            >{{ item.publishedAt | date : "MMMM dd" }}<span class="mx-1"></span
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------------Recent_News-Popular_Posts--------------------------------->

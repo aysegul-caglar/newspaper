@@ -1,0 +1,12 @@
+.list-group{
+  position: absolute;
+  left: 20px;
+  width:240px;
+  top:250px;
+}
+.list-group-item{
+  padding:20px;
+  }
+  .col-md-4{
+    width: 500px;
+  }

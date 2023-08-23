@@ -1,0 +1,74 @@
+
+
+<!---------------------------SLIDER--------------------------------->
+<div style="margin: 7%">
+  <div
+    id="carouselExample"
+    class="carousel slide pointer-event"
+    style="display: flex; justify-content: center"
+  >
+    <button
+      class="carousel-control-prev"
+      style="justify-content: start"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <div class="carousel-inner" style="width: 85%">
+      <div *ngFor="let carouselItem of carouselItems">
+        <div
+          class="carousel-item"
+          [ngClass]="{ active: carouselItem === carouselItems[0] }"
+          style="background-color: #f8f9fa"
+        >
+          <div class="d-flex row">
+            <div class="col-lg-6 d-block" style="padding: 0px">
+              <img
+                src="{{
+                  carouselItem.urlToImage
+                    ? carouselItem.urlToImage
+                    : 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
+                }}"
+                class="d-block w-100"
+                width="600"
+                height="400"
+                alt="Editor`s pick"
+              />
+            </div>
+            <div class="col-lg-6 col d-block" style="padding: 50px">
+              <span class="caption"></span>
+              <h4>
+                <a href="blog-single.html">{{ carouselItem.title }}</a>
+              </h4>
+              <p class="mb-3">{{ carouselItem.description }}</p>
+              <div class="post-meta">
+                <span class="d-block"
+                  ><a href="#">{{ carouselItem.author }}</a> in
+                  <a href="#">{{ carouselItem.source.name }}</a></span
+                >
+                <span class="date-read">{{
+                  carouselItem.publishedAt | date : "MMMM dd"
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="carousel-control-next"
+      style="justify-content: end"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!---------------------------SLIDER--------------------------------->
